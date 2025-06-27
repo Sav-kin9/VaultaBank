@@ -11,27 +11,32 @@ togglePassword.addEventListener("click", () => {
 // Form validation and interaction
 const form = document.getElementById("loginForm");
 const loginCard = document.querySelector(".login-card");
+const confirmPasswordInput = document.getElementById("confirmPassword");
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
 
   const email = document.getElementById("email").value.trim();
   const password = passwordInput.value.trim();
+  const confirmPassword = confirmPasswordInput ? confirmPasswordInput.value.trim() : null;
 
-  if (!email || !password) {
+  if (!email || !password || (confirmPasswordInput && !confirmPassword)) {
     loginCard.classList.add("shake");
     showToast("Please fill in all fields");
     setTimeout(() => loginCard.classList.remove("shake"), 300);
   } else if (!validateEmail(email)) {
-    showToast("Invalid email address");
     loginCard.classList.add("shake");
+    showToast("Invalid email address");
+    setTimeout(() => loginCard.classList.remove("shake"), 300);
+  } else if (confirmPasswordInput && password !== confirmPassword) {
+    loginCard.classList.add("shake");
+    showToast("Passwords do not match");
     setTimeout(() => loginCard.classList.remove("shake"), 300);
   } else {
-    // Simulate successful login
-    showToast("Login successful! Redirecting...");
+    // Simulate successful login/signup
+    showToast("Success! Redirecting...");
     setTimeout(() => {
-      // Replace this with real redirect
-      window.location.href = "dashboard.html";
+      window.location.href = "dashboard.html"; // Or replace with actual path
     }, 1500);
   }
 });
@@ -47,21 +52,29 @@ function validateEmail(email) {
   return /\S+@\S+\.\S+/.test(email);
 }
 
+// // Form validation and interaction ENDS HERE
 
-// Hamburger and Side Menu Toggle
 const hamburger = document.getElementById('hamburger');
-const sideMenu = document.getElementById('sideMenu');
+  const sideMenu = document.getElementById('sideMenu');
+  const navbar = document.querySelector('.navbar');
 
-// Toggle Side Menu on hamburger click
-hamburger.addEventListener('click', () => {
-  sideMenu.classList.toggle('open');
-  hamburger.classList.toggle('open'); // Optional: for "X" animation
-});
-
-// Close side menu when a mobile link is clicked
-document.querySelectorAll('.mobile-nav-links a').forEach(link => {
-  link.addEventListener('click', () => {
-    sideMenu.classList.remove('open');
-    hamburger.classList.remove('open');
+  // Toggle Side Menu
+  hamburger.addEventListener('click', () => {
+    sideMenu.classList.toggle('open');
   });
-});
+
+  // Close side menu on link click (optional)
+  document.querySelectorAll('.mobile-nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      sideMenu.classList.remove('open');
+    });
+  });
+
+  // Scroll-based background change
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });

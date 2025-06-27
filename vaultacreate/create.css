@@ -11,6 +11,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  line-height: 1.5;
   scroll-behavior: smooth;
 }
 
@@ -134,24 +135,6 @@ body {
   text-align: center;
 }
 
-/* HAMBURGER X ANIMATION */
-
-.hamburger.open span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
-}
-
-.hamburger.open span:nth-child(2) {
-  opacity: 0;
-}
-
-.hamburger.open span:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px);
-}
-
-.hamburger span {
-  transition: all 0.3s ease;
-}
-
 /* Responsive */
 @media (max-width: 768px) {
   .desktop-nav {
@@ -163,6 +146,7 @@ body {
   }
 }
 
+/* LOGIN STARTS HERE */
 
 .login-container {
   width: 100%;
