@@ -53,10 +53,11 @@ html, body {
 }
 
 .logo img {
-  height: 140%;
+  height: 40px;
   width: auto;
   display: block;
   transition: transform 0.3s ease;
+  transform: scale(3);
 }
 
 .logo::after {
@@ -65,7 +66,7 @@ html, body {
   left: 0;
   bottom: 0;
   height: 3px;
-  width: 100%;
+  width: 150%;
   background: rgba(0, 179, 134, 0.5);
   box-shadow: 0 2px 8px rgba(0, 179, 134, 0.3);
   opacity: 0;
@@ -458,4 +459,29 @@ header {
   .header-text p {
     font-size: 1rem;
   }
+}
+
+/* CUSTOMER CARE BTN CODE */
+.customer-care {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  background-color: #00B386;
+  padding: 0.75rem;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.customer-care:hover {
+  background-color: #009B75;
+  transform: scale(1.05);
+}
+
+.customer-care img {
+  width: 28px;
+  height: 28px;
+  display: block;
+  transform: scale(1.5);
 }
