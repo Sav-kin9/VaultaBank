@@ -1,0 +1,10 @@
+[
+  {
+    "email": "admin@vaulta.com",
+    "password": "secure123"
+  },
+  {
+    "email": "user@vaulta.com",
+    "password": "password456"
+  }
+]

@@ -65,3 +65,29 @@ document.querySelectorAll('.mobile-nav-links a').forEach(link => {
     hamburger.classList.remove('open');
   });
 });
+
+// script.js to Send Login Data
+
+document.querySelector("form").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  
+  const email = document.querySelector("#email").value;
+  const password = document.querySelector("#password").value;
+
+  const response = await fetch("http://localhost:3000/login", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({ email, password })
+  });
+
+  const result = await response.json();
+
+  if (result.success) {
+    alert("Login successful!");
+    // Redirect or show homepage
+  } else {
+    alert("Invalid email or password.");
+  }
+});
