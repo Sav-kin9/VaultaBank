@@ -464,24 +464,19 @@ header {
 /* CUSTOMER CARE BTN CODE */
 .customer-care {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 999;
+  bottom: 25px;
+  right: 25px;
   background-color: #00B386;
-  padding: 0.75rem;
+  color: white;
+  font-size: 1.8rem;
+  padding: 12px;
   border-radius: 50%;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  text-decoration: none;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
 }
 
 .customer-care:hover {
   background-color: #009B75;
-  transform: scale(1.05);
-}
-
-.customer-care img {
-  width: 28px;
-  height: 28px;
-  display: block;
-  transform: scale(1.5);
 }
