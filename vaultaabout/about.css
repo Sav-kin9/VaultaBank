@@ -208,7 +208,11 @@ body {
 }
 
 .about-text {
+  max-height: 15rem;
   flex: 1 1 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .about-text h1 {
@@ -224,22 +228,31 @@ body {
 }
 
 .about-image {
+  display: inline-block;
+  padding: 10px;
+  border-radius: 10px;
   flex: 1 1 400px;
   text-align: center;
+  transition: background-color 0.1s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.about-image:hover {
+  background-color: #09203f;
+  transform: scale(1.05);
 }
 
 .about-image img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
   padding: 15px;
   border-radius: 1rem;
-  transition: transform 0.3s ease, border 0.3s ease;
+  transition: transform 0.3s ease, border 0.3s ease-in;
   border: 3px solid transparent;
 }
 
 .about-image img:hover {
   transform: scale(1.05);
-  border: 3px solid #09203f;
+  box-shadow: 0 6px 20px rgba(9, 32, 63, 0.4);
 }
 
 /* === About Section (Mission/Vision) === */
