@@ -6,11 +6,22 @@
     font-family: 'Poppins', sans-serif;
 }
 html, body {
-    width: 100%;
+    width: 100vw;
     height: 100%;
     overflow-x: hidden;
     scroll-behavior: smooth;
-  background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.5);
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  z-index: 1111;
 }
 
 /* ============ NAV SECTION ============ */
@@ -20,12 +31,16 @@ html, body {
   top: 0;
   left: 0;
   right: 0; /* ← Add this */
-  height: 100px;
+  height: 70px;
   z-index: 1000;
   padding: 1rem 5%;
   background-color: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(10px);
   mix-blend-mode: multiply;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .navbar.scrolled {
@@ -493,6 +508,7 @@ header {
 .services-header h1 {
   font-size: clamp(2rem, 5vw, 2.5rem);
   color: #09203f;
+  padding-top: 70px;
   margin-bottom: 1rem;
 }
 
@@ -599,6 +615,7 @@ header {
 .contact-header h2 {
   font-size: 2.5rem;
   color: #09203f;
+  padding-top: 70px;
 }
 
 .contact-header p {
@@ -654,10 +671,11 @@ header {
 /* Testimonials */
 .testimonial-slider {
   position: relative;
+  width: 100%;
   max-width: 600px;
-  margin: 0 auto;
+  margin: 4rem auto;
   overflow: hidden;
-  height: 280px;
+  min-height: 280px;
 }
 
 .testimonial {
@@ -722,17 +740,18 @@ header {
 /* Social Media Icons */
 .social-icons {
   position: fixed;
-  bottom: 25px;
-  left: 25px;
+  bottom: 20px;
+  left: 20px;
   display: flex;
   flex-direction: column;
   gap: 1rem;
   z-index: 999;
+  transition: position 0.3s ease, bottom 0.3s ease;
 }
 
 .social-icons a {
   background-color: #00B386;
-  opacity: 45%;
+  opacity: 25%;
   padding: 12px;
   border-radius: 50%;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
@@ -749,9 +768,13 @@ header {
 }
 
 .social-icons a img {
-  width: 30px;
-  height: 30px;
+  width: 24px;
+  height: 24px;
   transition: transform 0.3s ease;
+}
+
+.social-icons.stopped {
+  position: absolute;
 }
 
 /* Optional: zoom icon slightly too on hover */

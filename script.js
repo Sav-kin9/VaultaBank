@@ -138,6 +138,6 @@ contactForm.addEventListener("submit", function(e) {
 });
 
 
-// FOOTER BEGINS HERE
-// FOOTER BEGINS HERE
+// SOCIAL MEDIA ICONS HERE
+// SOCIAL MEDIA ICONS HERE
 
