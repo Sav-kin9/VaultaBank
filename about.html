@@ -1,4 +1,16 @@
-* {
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Vaulta Bank</title>
+<link rel="icon" type="image/png" href="img/favicon.png">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <style>
+    * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -38,7 +50,7 @@ body {
 }
 
 .logo img {
-  height: 150px;
+  height: 60px;
   margin-top: 20px;
 }
 
@@ -319,3 +331,74 @@ body {
 .customer-care:hover {
   background-color: #009B75;
 }
+
+  </style>
+
+  <nav class="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="logo">
+      <img src="img/vaulta-logo.png" alt="Vaulta Logo">
+    </a>
+
+    <!-- Desktop Nav -->
+    <ul class="nav-links desktop-nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#support">Support</a></li>
+      <li><a href="login.html" class="login-btn">Login</a></li>
+      <li><a href="create.html" class="login-btn">Sign up</a></li>
+    </ul>
+
+    <!-- Hamburger -->
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <!-- Slide-in Menu (mobile only) -->
+  <div class="side-menu" id="sideMenu">
+    <ul class="mobile-nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#support">Support</a></li>
+      <li><a href="login.html" class="login-btn">Login</a></li>
+      <li><a href="create.html" class="login-btn">Sign up</a></li>
+    </ul>
+  </div>
+</nav>
+
+  <!-- Header Section -->
+  <header class="about-header">
+    <div class="about-text">
+      <h1>About Vaulta Bank</h1>
+      <p>Your trusted digital financial partner for secure, smart, and modern banking.</p>
+    </div>
+    <div class="about-image">
+      <img src="img/about-illustration.svg" alt="About Vaulta Bank">
+    </div>
+  </header>
+
+  <!-- Mission/Vision Section -->
+  <section class="about-section">
+    <div class="about-content">
+      <h2>Our Mission</h2>
+      <p>To deliver innovative banking services tailored to individuals and businesses by merging trust, technology, and customer excellence.</p>
+    </div>
+    <div class="about-content">
+      <h2>Our Vision</h2>
+      <p>To be the world's most preferred digital banking platform for financial growth and freedom.</p>
+    </div>
+  </section>
+
+  <!-- Customer Care Icon -->
+  <a href="mailto:saviournkanga@gmail.com" class="customer-care" title="Chat with Customer Care">💬</a>
+
+  <script src="js/about.js"></script>
+</body>
+</html>

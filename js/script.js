@@ -1,3 +1,8 @@
+// INDEX PAGE JS CODE
+// INDEX PAGE JS CODE
+// INDEX PAGE JS CODE
+// INDEX PAGE JS CODE
+
 // SCROLL: Change navbar background when scrolling past header
 window.addEventListener("scroll", function () {
   const navbar = document.getElementById("navbar");
@@ -136,8 +141,3 @@ contactForm.addEventListener("submit", function(e) {
     contactForm.reset();
   }, 1500);
 });
-
-
-// SOCIAL MEDIA ICONS HERE
-// SOCIAL MEDIA ICONS HERE
-

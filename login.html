@@ -1,4 +1,16 @@
-* {
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <title>Login | Vaulta Bank</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <style>
+      * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -424,3 +436,82 @@ form#loginForm {
     font-size: 0.95rem;
   }
 }
+  </style>
+
+  <nav class="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="logo">
+      <img src="img/vaulta-logo.png" alt="Vaulta Logo">
+    </a>
+
+    <!-- Desktop Nav -->
+    <ul class="nav-links desktop-nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+      <li><a href="#support">Support</a></li>
+      <li><a href="create.html" class="login-btn">Sign up</a></li>
+    </ul>
+
+    <!-- Hamburger -->
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <!-- Slide-in Menu (mobile only) -->
+  <div class="side-menu" id="sideMenu">
+    <ul class="mobile-nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+      <li><a href="#support">Support</a></li>
+      <li><a href="create.html" class="login-btn">Sign up</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+  <div class="login-container">
+    <div class="login-card animate">
+      <h2 class="logo">Vaulta <span>Bank</span></h2>
+      <h3>Welcome back | Log in here</h3>
+      
+    <form id="loginForm">
+      <div class="input-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter your email" required />
+      </div>
+
+      <div class="input-group password-toggle">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter your password" required />
+        <span id="togglePassword">👁️</span>
+      </div>
+
+      <div class="options">
+        <label><input type="checkbox" /> Remember me</label>
+        <a href="#" class="forgot">Forgot Password?</a>
+      </div>
+
+      <button type="submit" class="login-btn">Login</button>
+    </form>
+
+    <p class="signup-link">
+      Don't have an account?
+      <a href="create.html">Create one</a>
+    </p>
+
+
+    </div>
+  </div>
+
+  <div id="toast"></div>
+
+  <script src="js/login.js"></script>
+</body>
+</html>

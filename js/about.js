@@ -1,3 +1,9 @@
+// ABOUT JS CODE
+  // ABOUT JS CODE
+  // ABOUT JS CODE
+  // ABOUT JS CODE
+
+
 // === NAVBAR, SIDEMENU, HAMBURGER ===
 
 // Select elements

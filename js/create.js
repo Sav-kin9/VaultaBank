@@ -1,3 +1,9 @@
+// SIGNUP JS CODE
+// SIGNUP JS CODE
+// SIGNUP JS CODE
+// SIGNUP JS CODE
+
+
 // Show/hide password
 const togglePassword = document.getElementById("togglePassword");
 const passwordInput = document.getElementById("password");

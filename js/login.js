@@ -1,3 +1,9 @@
+// LOGIN JS CODE
+// LOGIN JS CODE
+// LOGIN JS CODE
+// LOGIN JS CODE
+// LOGIN JS CODE
+
 // PASSWORD TOGGLE
 document.addEventListener("DOMContentLoaded", () => {
   const togglePassword = document.getElementById("togglePassword");
@@ -82,3 +88,4 @@ document.querySelectorAll('.mobile-nav-links a').forEach(link => {
     hamburger.classList.remove('open');
   });
 });
+
