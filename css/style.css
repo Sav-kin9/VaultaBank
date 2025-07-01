@@ -95,6 +95,8 @@ html, body {
   transform: scaleX(1);
 }
 
+/* ===========NAVBAR NAVLINKS */
+
 .nav-links {
   list-style: none;
   display: flex;
@@ -126,6 +128,8 @@ html, body {
   background-color: #009B75;
   color: #fff;
 }
+
+/* HAMBURGER STYLING */
 
 .hamburger {
   width: 50px;
@@ -159,7 +163,7 @@ html, body {
   transform: rotate(-45deg) translateY(-8px);
 }
 
-/* Responsive */
+/* ===========HAMBURGER RESPONSIVENESS=========== */
 @media (max-width: 1024px) {
   .hamburger {
     display: flex;
@@ -198,9 +202,8 @@ html, body {
 }
 }
 
+/* ===========SIDE MENU PANEL=========== */
 
-
-/* === SIDE MENU PANEL === */
 .side-menu {
   position: fixed;
   top: 0;
@@ -247,7 +250,8 @@ html, body {
   color: #00B386;
 }
 
-/* Optional: mobile login button style inside menu */
+/* ===========OPTIONAL: MOBILE LOGIN BUTTON STYLE INSIDE MENU=========== */
+
 .mobile-nav-links .login-btn {
   background-color: #00B386;
   color: white;
@@ -260,7 +264,6 @@ html, body {
 .mobile-nav-links .login-btn:hover {
   background-color: #009B75;
 }
-
 
 .side-menu ul .mobile-nav-links {
   list-style: none;
@@ -282,6 +285,8 @@ html, body {
 .side-menu ul .mobile-nav-links li a:hover {
   color: #00B386;
 }
+
+/* ===========MOBILE MENU BAR STYLING/VISIBILITY=========== */
 
 @media (max-width: 1024px) {
   .mobile-nav-links {
@@ -356,7 +361,8 @@ header {
     justify-content: center;
 }
 
-/* BTN CODE HERE */
+/* ===========BTN CODE HERE=========== */
+
 .btn {
     padding: 0.75rem 1.5rem;
     background-color: #00B386; /* Accent Green */
@@ -372,6 +378,9 @@ header {
     background-color: #00A373;
     transform: scale(1.05);
 }
+
+/* ===========HEADER IMAGE STYLING=========== */
+
 .header-img {
     width: 100%;
     max-width: 500px;  /* adjust based on layout */
@@ -394,22 +403,23 @@ header {
     transform: translateX(0);
   }
 }
+.header-img img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
 .header-img img svg {
     width: 100%;
     height: auto;
     max-height: 300px;
-}
-.header-img img {
-    width: 100%;
-    height: auto;
-    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .header-img:hover img {
     transform: scale(1.03);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* SLIDE-IN + FADE-IN ANIMATIONS */
+/* ===========SLIDE-IN + FADE-IN ANIMATIONS=========== */
+
 .header-text, .header-img {
     opacity: 0;
     animation-fill-mode: forwards;
@@ -427,14 +437,16 @@ header {
     animation-delay: 0.5s;
 }
 
-/* Triggered state from JS */
+/* ===========TRIGGERED STATE FROM JS=========== */
+
 .header-img.animate {
     opacity: 1;
     transform: translateX(0);
     animation: floatImage 4s ease-in-out infinite;
 }
 
-/* SLIDE KEYFRAMES */
+/* ===========SLIDE KEYFRAMES=========== */
+
 @keyframes slideInLeft {
   to {
     opacity: 1;
@@ -448,14 +460,16 @@ header {
   }
 }
 
-/* FLOATING ANIMATION */
+/* ===========FLOATING ANIMATION=========== */
+
 @keyframes floatImage {
     0%   { transform: translateY(0); }
     50%  { transform: translateY(-10px); }
     100% { transform: translateY(0); }
 }
 
-/* HEADER CONTAINER RESPONSIVENESS */
+/* ===========HEADER CONTAINER RESPONSIVENESS=========== */
+
 @media (max-width: 768px) {
   .header-container {
     flex-direction: column;
@@ -476,7 +490,8 @@ header {
   }
 }
 
-/* CUSTOMER CARE BTN CODE */
+/* ===========CUSTOMER CARE BTN CODE=========== */
+
 .customer-care {
   position: fixed;
   bottom: 25px;
@@ -496,9 +511,8 @@ header {
   background-color: #009B75;
 }
 
-/* SERVICES SECTION BEGINS HERE */
+/* ===========SERVICES SECTION CONTAINER=========== */
 
-/* ===== Services Section Container ===== */
 .services-container {
   padding: 4rem 5%;
   background-color: #F2F4F7;
@@ -521,7 +535,8 @@ header {
   margin-right: auto;
 }
 
-/* ===== Services Grid ===== */
+/* ===========SERVICES GRID=========== */
+
 .services-section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -530,7 +545,8 @@ header {
   align-items: stretch;
 }
 
-/* ===== Service Card ===== */
+/*===========SERVICE CARD=========== */
+
 .service-card {
   background-color: #ffffff;
   padding: 2rem;
@@ -565,7 +581,8 @@ header {
   line-height: 1.6;
 }
 
-/* ===== Responsive Tweaks ===== */
+/*===========RESPONSIVE TWEAKS=========== */
+
 @media (max-width: 768px) {
   .services-container {
     padding: 3rem 1.5rem;
@@ -599,8 +616,7 @@ header {
   }
 }
 
-/* CONTACT US SECTION */
-/* CONTACT US SECTION */
+/* ===========CONTACT US SECTION=========== */
 
 .contact-section {
   padding: 4rem 5%;
@@ -623,6 +639,8 @@ header {
   font-size: 1rem;
   margin-top: 0.5rem;
 }
+
+/* ===========CONTACT US FORM STYLING=========== */
 
 .contact-form {
   max-width: 600px;
@@ -668,7 +686,7 @@ header {
   background-color: #009B75;
 }
 
-/* Testimonials */
+/* ===========TESTIMONIALS SLIDER SECTION=========== */
 .testimonial-slider {
   position: relative;
   width: 100%;
@@ -737,7 +755,8 @@ header {
   opacity: 0;
 }
 
-/* Social Media Icons */
+/* ===========SOCIAL MEDIA ICONS=========== */
+
 .social-icons {
   position: fixed;
   bottom: 20px;
@@ -777,12 +796,14 @@ header {
   position: absolute;
 }
 
-/* Optional: zoom icon slightly too on hover */
+/* ===========OPTIONAL: ZOOM ICON SLIGHTLY TOO ON HOVER=========== */
+
 .social-icons a:hover img {
   transform: scale(1.05);
 }
 
-/* Media Query for Small Devices */
+/* ===========MEDIA QUERY FOR SMALL DEVICES=========== */
+
 @media (max-width: 480px) {
   .social-icons a {
     padding: 10px;
@@ -804,7 +825,8 @@ header {
   transform: scale(1.1);
 }
 
-/* Media Queries */
+/* ===========MEDIA QUERIES=========== */
+
 @media (max-width: 768px) {
   .contact-section {
     padding: 3rem 1.5rem;
@@ -848,8 +870,7 @@ header {
   }
 }
 
-
-/* FOOTER BEGINS HERE */
+/* ===========FOOTER BEGINS HERE=========== */
 
 /* ========== FOOTER BASE STYLING ========== */
 .site-footer {
@@ -884,7 +905,8 @@ header {
   font-size: 0.95rem;
 }
 
-/* ========== QUICK LINKS ========== */
+/* ========== FOOTER QUICK LINKS ========== */
+
 .footer-links h4,
 .footer-contact h4 {
   font-size: 1.2rem;
@@ -913,12 +935,14 @@ header {
 }
 
 /* ========== CONTACT DETAILS ========== */
+
 .footer-contact p {
   margin: 0.5rem 0;
   font-size: 0.95rem;
 }
 
 /* ========== BOTTOM COPYRIGHT ========== */
+
 .footer-bottom {
   text-align: center;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -928,7 +952,8 @@ header {
   color: #ccc;
 }
 
-/* ========== RESPONSIVENESS ========== */
+/* ==========FOOTER SECTION RESPONSIVENESS ========== */
+
 @media (max-width: 768px) {
   .footer-container {
     flex-direction: column;
@@ -955,6 +980,8 @@ header {
     margin-bottom: 0.3rem;
   }
 }
+
+/* ===========FOOTER MEDIA QUERIES FOR RESPONSIVENESS */
 
 @media (max-width: 480px) {
   .footer-links h4,

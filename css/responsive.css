@@ -1,0 +1,102 @@
+/* =========RESPONSIVE SHEET FOR DASHBOARD========= */
+
+/* ========== MEDIA QUERIES START ========== */
+
+@media (max-width: 1200px) {
+  .dashboard {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .sidebar {
+    position: absolute;
+    left: -260px;
+    top: 0;
+    transition: left 0.3s ease;
+    z-index: 999;
+  }
+
+  .sidebar.active {
+    left: 0;
+  }
+
+  .dashboard {
+    margin-left: 0;
+    padding: 1.5rem;
+    padding-top: 80px;
+  }
+
+  .menu-toggle {
+  display: flex;
+}
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4);
+    display: none;
+    z-index: 998;
+  }
+
+  .overlay.active {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .dashboard-header-container {
+    flex-direction: column;
+}
+
+.dashboard-header-text {
+    width: 100%;
+}
+
+  .dashboard-header-right {
+    width: 50%;
+    align-self: flex-end;
+    padding-top: 10px;
+  }
+
+  .account-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .recent-transactions h2 {
+    font-size: 1.2rem;
+  }
+
+  .transaction p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-header-container h1 {
+    font-size: 1.3rem;
+  }
+
+  .dashboard-header-container p {
+    font-size: 0.85rem;
+  }
+
+  .dashboard-header-right img.profile-pic {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .sidebar .nav-links a {
+    font-size: 0.95rem;
+    padding: 0.6rem 0.8rem;
+  }
+}

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <link rel="stylesheet" href="css/signup.css">
+  <title>Sign up | Vaulta Bank</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+    <nav class="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="logo">
+      <img src="img/vaulta-logo.png" alt="Vaulta Logo">
+    </a>
+
+    <!-- Desktop Nav -->
+    <ul class="nav-links desktop-nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#support">Support</a></li>
+      <li><a href="login.html" class="login-btn">Login</a></li>
+    </ul>
+
+    <!-- Hamburger -->
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <!-- Slide-in Menu (mobile only) -->
+  <div class="side-menu" id="sideMenu">
+    <ul class="mobile-nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="vaultaabout/about.html">About</a></li>
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#support">Support</a></li>
+      <li><a href="login.html" class="login-btn">Login</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+  <div class="login-container">
+    <div class="login-card animate">
+      <h2 class="logo">Vaulta <span>Bank</span></h2>
+      <h3>Welcome back | Sign up here</h3>
+      <form id="loginForm">
+        <div class="input-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Enter your email" required />
+        </div>
+        <div class="input-group password-toggle">
+          <label for="password">Create Password</label>
+          <input type="password" id="password" placeholder="Enter your password" required />
+          <span id="togglePassword">👁️</span>
+        </div>
+        <div class="input-group password-toggle">
+          <label for="confirmPassword">Confirm Password</label>
+          <input type="password" id="confirmPassword" placeholder="Re-enter your password" required />
+        </div>
+
+        <div class="options">
+          <label><input type="checkbox" /> Remember me</label>
+          <a href="#" class="forgot">Forgot Password?</a>
+        </div>
+        <button type="submit" class="login-btn">Sign Up</button><br>
+      </form>
+      
+      <p class="login-link">
+        Already have an account?
+        <a href="login.html">Log in</a>
+      </p>
+    </div>
+
+  </div>
+
+  <div id="toast"></div>
+
+  <script>
+    // Show/hide password
+const togglePassword = document.getElementById("togglePassword");
+const passwordInput = document.getElementById("password");
+
+togglePassword.addEventListener("click", () => {
+  const type = passwordInput.type === "password" ? "text" : "password";
+  passwordInput.type = type;
+  togglePassword.textContent = type === "password" ? "👁️" : "🙈";
+});
+
+// Form validation and interaction
+const form = document.getElementById("loginForm");
+const loginCard = document.querySelector(".login-card");
+const confirmPasswordInput = document.getElementById("confirmPassword");
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const email = document.getElementById("email").value.trim();
+  const password = passwordInput.value.trim();
+  const confirmPassword = confirmPasswordInput ? confirmPasswordInput.value.trim() : null;
+
+  if (!email || !password || (confirmPasswordInput && !confirmPassword)) {
+    loginCard.classList.add("shake");
+    showToast("Please fill in all fields");
+    setTimeout(() => loginCard.classList.remove("shake"), 300);
+  } else if (!validateEmail(email)) {
+    loginCard.classList.add("shake");
+    showToast("Invalid email address");
+    setTimeout(() => loginCard.classList.remove("shake"), 300);
+  } else if (confirmPasswordInput && password !== confirmPassword) {
+    loginCard.classList.add("shake");
+    showToast("Passwords do not match");
+    setTimeout(() => loginCard.classList.remove("shake"), 300);
+  } else {
+    // Simulate successful login/signup
+    showToast("Success! Redirecting...");
+    setTimeout(() => {
+      window.location.href = "dashboard.html"; // Or replace with actual path
+    }, 1500);
+  }
+});
+
+function showToast(message) {
+  const toast = document.getElementById("toast");
+  toast.textContent = message;
+  toast.style.display = "block";
+  setTimeout(() => (toast.style.display = "none"), 3000);
+}
+
+function validateEmail(email) {
+  return /\S+@\S+\.\S+/.test(email);
+}
+
+// // Form validation and interaction ENDS HERE
+
+const hamburger = document.getElementById('hamburger');
+  const sideMenu = document.getElementById('sideMenu');
+  const navbar = document.querySelector('.navbar');
+
+  // Toggle Side Menu
+  hamburger.addEventListener('click', () => {
+    sideMenu.classList.toggle('open');
+  });
+
+  // Close side menu on link click (optional)
+  document.querySelectorAll('.mobile-nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      sideMenu.classList.remove('open');
+    });
+  });
+
+  // Scroll-based background change
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
+  </script>
+</body>
+</html>

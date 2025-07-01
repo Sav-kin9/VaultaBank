@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/png">
+    <title>Vaulta Bank Dashboard</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    
+    
+    
+    <!-- ===========SIDE BAR=========== -->
+    
+    <nav class="sidebar">
+        <div class="profile-section">
+            <img src="img/testimony01.jpg" alt="User Photo" />
+            <div class="full-name">Nkanga, Saviour Uwem</div>
+            <div class="user-id">ID: vaulta-u2031</div>
+            <div class="dark-mode-toggle">
+            <a href="#" id="darkModeToggle">
+                <i id="darkIcon" class="fas fa-moon"></i>
+            </a>
+            </div>
+        </div>
+
+        <h2 class="logo">Vaulta Bank</h2>
+        <ul class="nav-links">
+            <li><a href="#"><i class="fas fa-home"></i> Dashboard</a></li>
+            <li><a href="#"><i class="fas fa-exchange-alt"></i> Transactions</a></li>
+            <li><a href="#"><i class="fas fa-paper-plane"></i> Send Money</a></li>
+            <li><a href="#"><i class="fas fa-hand-holding-USD"></i> Receive Money</a></li>
+            <li><a href="#"><i class="fas fa-cogs"></i> Settings</a></li>
+            <!-- <li><a href="#"><i class="fas fa-tools"></i> Settings</a></li> -->
+            <li><a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- ===========MAIN DASHBOARD CONTENT=========== -->
+
+    <main class="dashboard">
+        <header class="dashboard-header">
+
+            <div class="dashboard-header-container">
+                <div class="dashboard-header-text">
+                    <h1>Welcome back, <span id="username">Saviour</span> 👋</h1>
+                    <p>Your Account Overview</p>
+                </div>
+                
+                <div class="menu-toggle" id="menuToggle">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+                
+                <div class="dashboard-header-right">
+                    <i class="fas fa-bell icon"></i>
+                    <img src="img/testimony01.jpg" alt="Profile" class="profile-pic"> <!--CHANGE IMAGE LATER-->
+                    <i class="fas fa-sign-out icon logout"></i>
+                </div>
+            </div>
+
+
+        </header>
+        
+        <!-- ======PAYMENT ACTIONS SECTION====== -->
+        
+        <section class="payment-actions">
+            <button>Withdraw</button>
+            <button>Transfer</button>
+            <button>Card Payment</button>
+            <button>Upload Gift Card</button>
+            <button>Bill Payment</button>
+            <button>Buy Airtime</button>
+            <button>Request Loan</button>
+        </section>
+
+
+        <!-- ===========ACCOUNT SUMMARY=========== -->
+    
+        <section class="account-summary">
+            <div class="card balance-card">
+                <h3>Available Balance</h3>
+                    <div class="amount-container">
+                        <p class="amount money-value">$12,480.00</p>
+                        <i class="fas fa-eye toggle-amount" id="toggleBalance"></i>
+                    </div>
+                <span class="card-info">Last updated: just now</span>
+            </div>
+        </section>
+
+        <!-- ===========RECENT TRANSACTIONS=========== -->
+        
+    <section class="recent-transactions">
+        <h2>Recent Transactions</h2>
+        <div class="transactions-list">
+            <div class="transaction">
+                <p>Transfer to Samuel U.</p>
+                <span class="amount debit">-$120.00</span>
+            </div>
+            <div class="transaction">
+                <p>Received from Mfonima</p>
+                <span class="amount credit">+$250.00</span>
+            </div>
+            <div class="transaction">
+                <p>Utility Payment</p>
+                <span class="amount debit">-$60.00</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="transaction-chart">
+        <h2>Transaction Summary</h2>
+        <canvas id="transactionChart" height="200"></canvas>
+    </section>
+
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="js/dashboard.js"></script>
+</body>
+</html>
