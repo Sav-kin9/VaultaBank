@@ -22,7 +22,6 @@ body {
   min-width: 250px;
   background-color: #fff;
   height: 100vh;
-  padding: 2rem 1.5rem;
   display: flex;
   flex-direction: column;
   box-shadow: 2px 0 12px rgba(0, 0, 0, 0.06);
@@ -32,12 +31,20 @@ body {
   z-index: 1000;
 }
 
+.sidebar .profile-section {
+  width: 100%;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
 .sidebar .logo {
     font-size: 1.8rem;
     font-weight: bold;
     color: #00B386;
     margin-bottom: 3rem;
     text-align: center;
+  padding: 0rem 1.5rem;
+  padding-top: 2rem;
 }
 
 .sidebar .nav-links {
@@ -45,6 +52,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1.3rem;
+  padding: 0rem 1.5rem;
 }
 
 .sidebar .nav-links a {
