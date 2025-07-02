@@ -93,7 +93,6 @@ body {
 
 .hamburger span {
   display: block;
-  width: 25px;
   height: 3px;
   background: #1E2A38;
   border-radius: 2px;
@@ -101,9 +100,22 @@ body {
   transition: all 0.3s ease;
 }
 
+.hamburger span:nth-child(1) {
+  width: 18px;
+}
+
+.hamburger span:nth-child(2) {
+  width: 30px;
+}
+
+.hamburger span:nth-child(3) {
+  width: 23px;
+}
+
 /* ==========WHEN ACTIVE - (MENU OPENS)========== */
 
 .hamburger.active span:nth-child(1) {
+  width: 30px;
   transform: rotate(45deg) translate(5px, 5px);
 }
 
@@ -112,6 +124,7 @@ body {
 }
 
 .hamburger.active span:nth-child(3) {
+  width: 30px;
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
