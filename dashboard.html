@@ -19,9 +19,13 @@
     
     <nav class="sidebar">
         <div class="profile-section">
-            <img src="img/testimony01.jpg" alt="User Photo" />
-            <div class="full-name">Nkanga, Saviour Uwem</div>
-            <div class="user-id">ID: vaulta-u2031</div>
+            <img src="img/testimony01.jpg" id="userPhoto" alt="Profile" class="profile-pic" />
+            <h3 id="fullName">Loading...</h3>
+            <p>ID: <span id="idNumber">****</span></p>
+            <!-- <div class="full-name">Nkanga, Saviour Uwem</div> -->
+            <!-- <div class="user-id">ID: vaulta-u2031</div> -->
+
+
             <div class="dark-mode-toggle">
             <a href="#" id="darkModeToggle">
                 <i id="darkIcon" class="fas fa-moon"></i>
@@ -37,7 +41,7 @@
             <li><a href="#"><i class="fas fa-money-bill-wave"></i> Receive Money</a></li>
             <li><a href="#"><i class="fas fa-cogs"></i> Settings</a></li>
             <!-- <li><a href="#"><i class="fas fa-tools"></i> Settings</a></li> -->
-            <li><a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            <li><a href="#"><i class="fas fa-sign-out-alt icon logout" id="logoutBtn"></i> Logout</a></li>
         </ul>
     </nav>
 
@@ -49,16 +53,16 @@
 
             <div class="dashboard-header-container">
                 <div class="dashboard-header-text">
-                    <h1>Welcome back, <span id="username">Saviour</span> 👋</h1>
-                    <p>Your Account Overview</p>
+                    <h1>Welcome back, <span id="username">Mr. Uwem</span> 👋 </h1>
+                    <p>To Your Dashboard Area</p>
                 </div>
                 
                 <div class="dashboard-header-right">
                     <i class="fas fa-bell icon"></i>
-                    <img src="img/testimony01.jpg" alt="Profile" class="profile-pic"> <!--CHANGE IMAGE LATER-->
-                    <i class="fas fa-sign-out icon logout"></i>
+                        <img src="img/testimony01.jpg" id="userPhoto" alt="Profile" class="profile-pic" />    <!--CHANGE IMAGE LATER-->
+                    <i class="fas fa-sign-out icon logout" id="logoutBtn"></i>
                 </div>
-                
+
                 <div class="menu-toggle" id="menuToggle">
                     <div class="bar"></div>
                     <div class="bar"></div>
@@ -77,14 +81,13 @@
             <button>Card Payment</button>
             <!-- <button>Upload Gift Card</button> -->
             <button>Bill Payment</button>
-            <button>Buy Airtime</button>
             <button>Request Loan</button>
         </section>
 
 
         <!-- ===========ACCOUNT SUMMARY=========== -->
     
-        <section class="account-summary">
+        <!-- <section class="account-summary">
             <div class="card balance-card">
                 <h3>Available Balance</h3>
                     <div class="amount-container">
@@ -93,7 +96,14 @@
                     </div>
                 <span class="card-info">Last updated: just now</span>
             </div>
-        </section>
+        </section> -->
+
+        <div class="balance-area">
+            <h2>Available Balance: <span class="money-value">$12,480.00</span></h2>
+            <p>Account no: <span id="accountNumber">**********</span></p>
+            <i class="fas fa-eye toggle-amount" id="toggleBalance"></i>
+            <span class="card-info">Last updated: just now</span>
+        </div>
 
         <!-- ===========RECENT TRANSACTIONS=========== -->
         
@@ -135,9 +145,11 @@
 
 
 
+<!-- ========FIREBASE SDKs======== -->
+ <!-- <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+ <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script> -->
 
 
-
-<script src="js/dashboard.js"></script>
+<script src="js/dashboard.js" type="module"></script>
 </body>
 </html>

@@ -48,7 +48,25 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px) { /*  THIS SCREEN WIDTH AND LOWER ISNT FULLY RESPONSIVE  */
+  .sidebar {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .sidebar.active {
+    transform: translateX(0);
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+  
+  .dashboard {
+    margin-left: 0;
+    padding: 1.2rem;
+  }
+  
   .dashboard-header {
     flex-direction: column;
     align-items: flex-start;
@@ -67,6 +85,12 @@
     width: 50%;
     align-self: flex-end;
     padding-top: 10px;
+    gap: 0.5rem;
+  }
+
+  .payment-actions {
+    flex-direction: column;
+    gap: 0.7rem;
   }
 
   .account-summary {

@@ -426,14 +426,18 @@ body.dark .dashboard-header-right .icon.logout {
 
 /* ========== PAYMENT BUTTONS ========== */
 .payment-actions {
+  width: 100%;
+  height: fit-content;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
   gap: 1rem;
   margin: 2rem 0;
 }
 
 .payment-actions button {
+max-width: 200px;
   padding: 0.8rem 1.4rem;
   border: none;
   border-radius: 10px;
@@ -460,3 +464,15 @@ body.dark .dashboard-header-right .icon.logout {
 body.dark .transaction-chart {
   background-color: #2e2e44;
 }
+
+/* PULLING ACCOUNT AND ID FROM FIRESTORE */
+
+#idNumber, #accountNumber {
+  font-weight: bold;
+  font-size: 1rem;
+  color: #333;
+}
+body.dark #idNumber, body.dark #accountNumber {
+  color: #ddd;
+}
+
